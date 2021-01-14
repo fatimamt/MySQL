@@ -1,0 +1,157 @@
+# Actividad Grupal 05
+# Fatima Martínez Torres
+# st1809101@upy.edu.mx
+
+#1 COLECTION: sample_training.companies
+
+{
+ project: {
+  phone_number: 1,
+  email_address: 1,
+  name: 1,
+  _id: 0
+ }
+}
+
+#2 COLECTION: sample_training.grades
+
+{
+ project: {
+  class_id: 1
+ }
+}
+
+#3 COLECTION: sample_training.companies
+
+{
+ filter: {
+  founded_month: 10
+ },
+ project: {
+  name: 1
+ }
+}
+
+#4 COLECTION: sample_training.companies
+
+{
+ filter: {
+  founded_year: 2008
+ },
+ project: {
+  name: 1
+ }
+}
+
+#5 COLECTION: sample_training.posts
+
+{
+ filter: {
+  author: 'machine'
+ }
+}
+
+#6 COLECTION: sample_training.grades
+
+{
+ filter: {
+  class_id: {
+   $in: [
+    357,
+    57,
+    465
+   ]
+  }
+ },
+ project: {
+  scores: 1
+ }
+}
+
+#7 COLECTION: sample_training.companies
+
+{
+ filter: {
+  founded_month: 10,
+  founded_year: 2008
+ },
+ project: {
+  name: 1
+ }
+}
+
+#8 COLECTION: sample_training.companies
+
+{
+ filter: {
+  number_of_employees: {
+   $gt: 50
+  }
+ },
+ project: {
+  name: 1,
+  number_of_employees: 1
+ }
+}
+
+#9 COLECTION: sample_training.routes
+
+{
+ filter: {
+  stops: {
+   $and: [
+    {
+     $gte: 1
+    },
+    {
+     $lte: 5
+    }
+   ]
+  }
+ }
+}
+
+#10 COLECTION: sample_training.companies
+
+{
+ filter: {
+  number_of_employees: {
+   $ne: null
+  }
+ },
+ sort: {
+  number_of_employees: 1
+ },
+ limit: 1
+}
+
+#11 COLECTION: sample_training.companies
+
+{
+ project: {
+  name: 1
+ },
+ sort: {
+  number_of_employees: -1
+ },
+ limit: 1
+}
+
+
+#12 COLECTION: sample_training.trips
+
+{
+ sort: {
+  tripduration: -1
+ },
+ limit: 1
+}
+
+#13 COLECTION: sample_training.trips
+
+{
+ sort: {
+  tripduration: 1
+ },
+ limit: 1
+}
